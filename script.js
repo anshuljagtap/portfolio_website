@@ -87,14 +87,63 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', data);
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '📤 Sending...';
+            submitBtn.disabled = true;
             
-            // Show success message
-            alert('Message sent! (This is a demo - in a real app, this would send to your email)');
-            
-            // Reset form
-            this.reset();
+            // Submit to Google Apps Script
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Required for Google Apps Script
+            })
+            .then(() => {
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.innerHTML = `
+                    <div style="background: #00ff00; color: #000; padding: 15px; border-radius: 5px; margin: 10px 0; text-align: center;">
+                        ✅ Message sent successfully! I'll get back to you soon.
+                    </div>
+                `;
+                this.parentNode.insertBefore(successMessage, this.nextSibling);
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            })
+            .catch((error) => {
+                // Show error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.innerHTML = `
+                    <div style="background: #ff0000; color: #fff; padding: 15px; border-radius: 5px; margin: 10px 0; text-align: center;">
+                        ❌ Error sending message. Please try again or contact me directly.
+                    </div>
+                `;
+                this.parentNode.insertBefore(errorMessage, this.nextSibling);
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 5000);
+                
+                console.error('Form submission error:', error);
+            });
         });
     }
 
