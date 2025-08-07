@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshul Jagtap - Terminal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="terminal-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="terminal-icon">$</span>
+                <span class="username">anshul_jagtap@cs-portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">home</a>
+                <a href="#projects" class="nav-link" data-section="projects">projects</a>
+                <a href="#experience" class="nav-link" data-section="experience">experience</a>
+                <a href="#contact" class="nav-link" data-section="contact">contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/anshuljagtap" target="_blank" title="GitHub">📁</a>
+                <a href="https://www.linkedin.com/in/anshul-jagtap/" target="_blank" title="LinkedIn">💼</a>
+                <a href="Jagtap_Anshul_Resume.pdf" target="_blank" title="Resume">📄</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn red"></span>
+                        <span class="btn yellow"></span>
+                        <span class="btn green"></span>
+                    </div>
+                    <span class="terminal-title">anshul_jagtap@cs-portfolio</span>
+                </div>
+                <div class="terminal-content">
+                    <div class="typewriter-container">
+                        <div id="typewriter-text"></div>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div id="home-content" class="home-content" style="display: none;">
+                        <div class="welcome-text">
+                            <p>Welcome to my digital workspace. I'm a Computer Science student at UC Santa Cruz with a passion for:</p>
+                            <ul class="passions-list">
+                                <li>Distributed systems and multi-threaded applications</li>
+                                <li>Machine learning and artificial intelligence</li>
+                                <li>Financial technology and algorithmic trading</li>
+                                <li>Computer vision and real-time processing</li>
+                                <li>System optimization and performance engineering</li>
+                            </ul>
+                        </div>
+                        <div class="education-info">
+                            <h3>🎓 Education</h3>
+                            <div class="education-card">
+                                <h4>University of California - Santa Cruz</h4>
+                                <p>Bachelor's in Computer Science | GPA: 3.82</p>
+                                <p>September 2022 - August 2025</p>
+                                <div class="coursework">
+                                    <strong>Key Coursework:</strong> Data Structures & Algorithms, Analysis of Algorithms, Computational Models, Cryptography, Computational Models and Applications,Machine Learning, Artificial Intelligence, NLP, Discrete Math, Statistics and Probability,
+                                    Principles of System Design, Introduction to Management of Technology I, Calculus, Multivariate Calculus
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-buttons">
+                            <a href="https://github.com/anshuljagtap" target="_blank" class="btn-terminal">
+                                📁 GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/anshul-jagtap/" target="_blank" class="btn-terminal">
+                                💼 LinkedIn
+                            </a>
+                            <a href="Jagtap_Anshul_Resume.pdf" target="_blank" class="btn-terminal">
+                                📄 Resume
+                            </a>
+                        </div>
+                        <div class="help-text">
+                            <p>$ Type 'help' for available commands or navigate using the menu above.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-title">$ ls projects/</span>
+                </div>
+                <div class="terminal-content">
+                    <p class="section-subtitle">Exploring my codebase and contributions...</p>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon">🌐</span>
+                                <div>
+                                    <h3>Multi-Threaded HTTP Server</h3>
+                                    <span class="project-category">Systems Programming</span>
+                                    <span class="project-date">Nov 2024 - Dec 2024</span>
+                                </div>
+                            </div>
+                            <p><strong>Role:</strong> Developer</p>
+                            <p>Developed a high-performance multi-threaded HTTP server in C using a fixed thread pool and thread-safe queue, achieving 4× throughput over a single-threaded version. Built a synchronization-safe audit logging system with pthread_mutex to ensure correct request ordering and durability. Designed a per-resource locking mechanism with a URI-to-rwlock_t hash map to minimize contention and maintain correctness under concurrency.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">pthread</span>
+                                <span class="tech-tag">HTTP</span>
+                                <span class="tech-tag">Concurrency</span>
+                            </div>
+                            <div class="code-request">
+                                <p>💡 <em>Code available on request</em></p>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon">📊</span>
+                                <div>
+                                    <h3>Trading Strategy Simulator</h3>
+                                    <span class="project-category">Financial Technology</span>
+                                </div>
+                            </div>
+                            <p>Designed a comprehensive trading simulator handling real-time financial data for over 1,000 tickers using yfinance and NumPy, supporting multi-indicator strategy backtesting with 20% improved trading accuracy.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">yfinance</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Tkinter</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/anshuljagtap/trading-simulator" target="_blank" class="btn-terminal-secondary">📁 Code</a>
+                                <a href="#" class="btn-terminal">🌐 Live</a>
+                            </div>
+                            <div class="code-request">
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon">🧠</span>
+                                <div>
+                                    <h3>ASL Gesture Detection</h3>
+                                    <span class="project-category">Machine Learning</span>
+                                </div>
+                            </div>
+                            <p>Engineered a real-time ASL detection model using TensorFlow/Keras, trained on 5,000+ labeled gesture images achieving 95% accuracy with <50ms recognition speeds using OpenCV and cvzone.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">Computer Vision</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/anshuljagtap/asl-detection" target="_blank" class="btn-terminal-secondary">📁 Code</a>
+                                <a href="#" class="btn-terminal">🌐 Demo</a>
+                            </div>
+                            <div class="code-request">
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <span class="project-icon">💻</span>
+                                <div>
+                                    <h3>Terminal Portfolio Website</h3>
+                                    <span class="project-category">Web Development</span>
+                                </div>
+                            </div>
+                            <p>Built a modern terminal-style portfolio website using HTML, CSS, and JavaScript with typewriter animations, responsive design, and interactive terminal aesthetics. Features smooth transitions, keyboard shortcuts, and a nano editor-style contact form.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive</span>
+                                <span class="tech-tag">Terminal UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/anshuljagtap/portfolio" target="_blank" class="btn-terminal-secondary">📁 Code</a>
+                                <a href="#" class="btn-terminal">🌐 Live</a>
+                            </div>
+                            <div class="code-request">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-footer">
+                        <p>$ Found 4 projects. Use 'cd /experience' to see my work history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-title">$ cat experience.log</span>
+                </div>
+                <div class="terminal-content">
+                    <p class="section-subtitle">Loading work history and professional journey...</p>
+                    <div class="experience-timeline">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <span class="experience-icon">🔬</span>
+                                <div>
+                                    <h3>Undergraduate Researcher</h3>
+                                    <div class="experience-meta">
+                                        <span>🏢 Baskin Engineering, UC Santa Cruz</span>
+                                        <span>📅 February 2024 - Present</span>
+                                        <span>📍 Santa Cruz, CA, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Developing distributed control algorithms using Python and MATLAB for campus eVTOL simulations, improving path efficiency by 25% and reducing energy consumption.</p>
+                            <div class="experience-highlights">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>Improved path efficiency by 25% and reduced energy consumption in eVTOL simulations</li>
+                                    <li>Collaborated with IIT Madras to optimize atmospheric sensing models</li>
+                                    <li>Enhanced air-ground data collection safety by 20%</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">MATLAB</span>
+                                <span class="tech-tag">Distributed Systems</span>
+                                <span class="tech-tag">Control Algorithms</span>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <span class="experience-icon">💻</span>
+                                <div>
+                                    <h3>Software Engineer Intern</h3>
+                                    <div class="experience-meta">
+                                        <span>🏢 Akhetonics</span>
+                                        <span>📅 June 2024 - August 2024</span>
+                                        <span>📍 Berlin, Germany</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Developed and optimized Graph Coloring algorithms in C# using .NET for Sapphire Compiler, reducing register allocation time by 30% and enhancing memory management with advanced NUnit test cases.</p>
+                            <div class="experience-highlights">
+                                <h4>Key Achievements:</h4>
+                                <ul>
+                                    <li>Reduced register allocation time by 30% in Sapphire Compiler</li>
+                                    <li>Enhanced memory management with NUnit test cases for 100,000+ registers</li>
+                                    <li>Achieved 60% improvement in time complexity</li>
+                                    <li>Translated SPIR-V Bit Instructions to Ray Core for 16-bit ISA</li>
+                                </ul>
+                            </div>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">.NET</span>
+                                <span class="tech-tag">NUnit</span>
+                                <span class="tech-tag">SPIR-V</span>
+                                <span class="tech-tag">GPU Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="terminal-footer">
+                        <p>$ Experience log loaded successfully. Use 'cd /contact' to get in touch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-title">$ nano contact.txt</span>
+                </div>
+                <div class="terminal-content">
+                    <p class="section-subtitle">Opening contact form in nano editor...</p>
+                    <div class="contact-form">
+                        <div class="nano-header">
+                            <span class="nano-title">nano contact.txt</span>
+                            <span class="nano-menu">File Edit View</span>
+                        </div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>👤 Name:</label>
+                                <input type="text" name="name" placeholder="Enter your name..." required>
+                            </div>
+                            <div class="form-group">
+                                <label>📧 Email:</label>
+                                <input type="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>💬 Subject:</label>
+                                <input type="text" name="subject" placeholder="What's this about?" required>
+                            </div>
+                            <div class="form-group">
+                                <label>💬 Message:</label>
+                                <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-terminal full-width">
+                                📤 Send Message
+                            </button>
+                        </form>
+                        <div class="contact-info">
+                            <h3>Alternative Contact Methods:</h3>
+                            <div class="contact-methods">
+                                <div>📧 Email: anshulsmitajagtap@gmail.com</div>
+                                <div>📞 Phone: +1 (628) 777-8074</div>
+                                <div>📍 Location: Santa Cruz, CA, USA</div>
+                                <div>💼 LinkedIn: linkedin.com/in/anshuljagtap</div>
+                                <div>📁 GitHub: github.com/anshuljagtap</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nano-footer">
+                        <p>^G Get Help  ^O WriteOut  ^W Where Is  ^K Cut Text  ^J Justify  ^C Cur Pos</p>
+                        <p>^X Exit      ^R Read File ^\ Replace   ^U PasteText ^T To Spell  ^_ Go To Line</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
