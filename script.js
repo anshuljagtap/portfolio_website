@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const homeContent = document.getElementById('home-content');
     
     const terminalLines = [
-        { prompt: 'anshul_jagtap@cs-portfolio:~$ ', command: 'whoami', output: 'Computer Science Student | UC Santa Cruz | GPA: 3.82 | SWE & ML Enthusiast' },
+        { prompt: 'anshul_jagtap@cs-portfolio:~$ ', command: 'whoami', output: 'Computer Science Student | UC Santa Cruz | GPA: 3.72 | SWE & ML Enthusiast' },
         { prompt: 'anshul_jagtap@cs-portfolio:~$ ', command: './start --explore', output: '[ Loading projects, experience, and skills... ]' }
     ];
 
